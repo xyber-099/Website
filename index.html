@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title> xyberframe </title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated-heading"> Coming Soon! </h1>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const heading = document.querySelector('.animated-heading');
+            const text = heading.textContent;
+            heading.innerHTML = '';
+
+            text.split('').forEach((char, index) => {
+                const span = document.createElement('span');
+                if (char === ' ') { span.innerHTML = '&nbsp;'; }
+                else { span.textContent = char; }
+                heading.appendChild(span);
+            });
+        });
+    </script>
+</body>
+</html>
